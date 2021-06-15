@@ -73,6 +73,7 @@ EC2インスタンス等に関連付けを行えば無料で使用できます�
 #### 1-10-4.「インスタンスの作成」ボタンを押下
 
 ![image](https://user-images.githubusercontent.com/66664167/92110749-2418e280-ee26-11ea-9757-1730ecfe1bf1.png)
+![image](https://user-images.githubusercontent.com/60914189/122027914-7865df80-ce06-11eb-9753-1aa4602e51c2.png)
 
 ### 1-11.「インスタンスの表示」ボタンを押下
 ![image](https://user-images.githubusercontent.com/66664167/92112724-33e5f600-ee29-11ea-86cf-ed16968d6d2b.png)
