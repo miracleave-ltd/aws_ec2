@@ -41,6 +41,22 @@ EC2インスタンス等に関連付けを行えば無料で使用できます�
 ### 1-5.インスタンスの詳細の設定：初期設定のまま、「次のステップ」ボタン押下（環境によって詳細設定を変える）
 ![image](https://user-images.githubusercontent.com/66664167/122140678-cf12fe00-ce86-11eb-9463-9aebc36b540d.png)
 
+自動割り当てパブリックIPが"サブネット設定を使用（有効）"であること、
+ユーザーデータに下記ファイル内容を設定する
+
+```
+#!/bin/bash
+# Dockerをインストール
+sudo yum update -y
+sudo yum install -y docker
+sudo service docker start
+sudo chkconfig docker on
+sudo usermod -a -G docker ec2-user
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo yum install -y git
+```
+
 ### 1-6.ストレージの追加：初期設定のまま、「次のステップ」ボタン押下（環境によって詳細設定を変える）
 ![image](https://user-images.githubusercontent.com/66664167/92109483-11051300-ee24-11ea-9b22-256e3d79e4e2.png)
 
